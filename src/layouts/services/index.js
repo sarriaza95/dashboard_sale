@@ -53,7 +53,7 @@ function ServicesList() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Month Goals Lists
+                  Services Lists
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>

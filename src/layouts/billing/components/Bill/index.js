@@ -27,7 +27,7 @@ import MDButton from "components/MDButton";
 // Material Dashboard 2 React context
 import { useMaterialUIController } from "context";
 
-function Bill({ name, company, email, vat, noGutter }) {
+function Bill({ name, company, email, Phone, SoldBy, SaleDate, SaleAmount, noGutter }) {
   const [controller] = useMaterialUIController();
   const { darkMode } = controller;
 
@@ -56,11 +56,7 @@ function Bill({ name, company, email, vat, noGutter }) {
           </MDTypography>
 
           <MDBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
-            <MDBox mr={1}>
-              <MDButton variant="text" color="error">
-                <Icon>delete</Icon>&nbsp;delete
-              </MDButton>
-            </MDBox>
+            
             <MDButton variant="text" color={darkMode ? "white" : "dark"}>
               <Icon>edit</Icon>&nbsp;edit
             </MDButton>
@@ -82,10 +78,34 @@ function Bill({ name, company, email, vat, noGutter }) {
             </MDTypography>
           </MDTypography>
         </MDBox>
+        <MDBox mb={1} lineHeight={0}>
+          <MDTypography variant="caption" color="text">
+            Sold By:&nbsp;&nbsp;&nbsp;
+            <MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+              {SoldBy}
+            </MDTypography>
+          </MDTypography>
+        </MDBox>
+        <MDBox mb={1} lineHeight={0}>
+          <MDTypography variant="caption" color="text">
+            Sale Date:&nbsp;&nbsp;&nbsp;
+            <MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+              {SaleDate}
+            </MDTypography>
+          </MDTypography>
+        </MDBox>
+        <MDBox mb={1} lineHeight={0}>
+          <MDTypography variant="caption" color="text">
+            Sale Amount:&nbsp;&nbsp;&nbsp;
+            <MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+              {SaleAmount}
+            </MDTypography>
+          </MDTypography>
+        </MDBox>
         <MDTypography variant="caption" color="text">
-          VAT Number:&nbsp;&nbsp;&nbsp;
+          Phone Number:&nbsp;&nbsp;&nbsp;
           <MDTypography variant="caption" fontWeight="medium">
-            {vat}
+            {Phone}
           </MDTypography>
         </MDTypography>
       </MDBox>
@@ -103,7 +123,10 @@ Bill.propTypes = {
   name: PropTypes.string.isRequired,
   company: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  vat: PropTypes.string.isRequired,
+  Phone: PropTypes.string.isRequired,
+  SoldBy: PropTypes.string.isRequired,
+  SaleDate: PropTypes.string.isRequired,
+  SaleAmount: PropTypes.string.isRequired,
   noGutter: PropTypes.bool,
 };
 

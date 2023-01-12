@@ -40,7 +40,7 @@ import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Clients from "layouts/clients"
 import Monthgoals from "layouts/monthgoals"
-import Billing from "layouts/billing";
+import SalesList from "layouts/sales";
 import ServicesList from "layouts/services";
 import RTL from "layouts/rtl";
 import Notifications from "layouts/notifications";
@@ -94,11 +94,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Billing",
-    key: "billing",
+    name: "Sales",
+    key: "sales",
     icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/billing",
-    component: <Billing />,
+    route: "/sales",
+    component: <SalesList />,
   },
   {
     type: "collapse",
