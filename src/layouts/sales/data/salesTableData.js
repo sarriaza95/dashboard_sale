@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/function-component-definition */
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Top Floor Marketing - Sale Dashboard - v1.0.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Top Floor Marketing (https://topfloormarketing.net/)
 
-Coded by www.creative-tim.com
+Coded by https://topfloormarketing.net/
 
  =========================================================
 
@@ -19,6 +20,7 @@ import Card from "@mui/material/Card";
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+import moment from "moment";
 
 // Billing page components
 import Bill from "layouts/billing/components/Bill";
@@ -82,7 +84,7 @@ function SalesInformation() {
             email={Email}
             Phone={PhoneNumber}
             SoldBy={SoldBy_F +" " + SoldBy_L}
-            SaleDate= {sale.attributes.SaleDate}
+            SaleDate= {moment(sale.attributes.SaleDate).utc().format('YYYY-MM-DD')}
             SaleAmount= {new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(sale.attributes.SaleAmount)}
           />
         ]

@@ -33,7 +33,7 @@ import Invoices from "layouts/billing/components/Invoices";
 import SalesInformation from "layouts/sales/data/salesTableData";
 import Transactions from "layouts/billing/components/Transactions";
 
-function SalesList() {
+function ResalesList() {
   return (
     <DashboardLayout>
       <DashboardNavbar absolute isMini />
@@ -52,4 +52,4 @@ function SalesList() {
   );
 }
 
-export default SalesList;
+export default ResalesList;

@@ -42,6 +42,7 @@ import Clients from "layouts/clients"
 import Monthgoals from "layouts/monthgoals"
 import SalesList from "layouts/sales";
 import ServicesList from "layouts/services";
+import ResalesList from "layouts/resales";
 import RTL from "layouts/rtl";
 import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
@@ -99,6 +100,14 @@ const routes = [
     icon: <Icon fontSize="small">receipt_long</Icon>,
     route: "/sales",
     component: <SalesList />,
+  },
+  {
+    type: "collapse",
+    name: "Resales",
+    key: "resales",
+    icon: <Icon fontSize="small">receipt_long</Icon>,
+    route: "/resales",
+    component: <ResalesList />,
   },
   {
     type: "collapse",
